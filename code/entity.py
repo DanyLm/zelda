@@ -1,4 +1,5 @@
 import pygame
+from math import sin
 
 
 class Entity(pygame.sprite.Sprite):
@@ -35,3 +36,6 @@ class Entity(pygame.sprite.Sprite):
                         self.hitbox.bottom = sprite.hitbox.top  # moving down
                     if self.direction.y < 0:
                         self.hitbox.top = sprite.hitbox.bottom  # moving up
+
+    def wave_value(self):
+        return 255 if sin(pygame.time.get_ticks()) >= 0 else 0

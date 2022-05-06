@@ -59,14 +59,14 @@ class UI:
 
     def selection_box(self, left, top, has_switched):
         bg_rect = pygame.Rect(left, top, ITEM_BOX_SIZE, ITEM_BOX_SIZE)
-        pygame.draw.rect(self.display_surface, UI_BG_COLOR, bg_rect, 0, 50)
+        pygame.draw.rect(self.display_surface, UI_BG_COLOR, bg_rect, 0, 25)
 
         if has_switched:
             pygame.draw.rect(self.display_surface, UI_BORDER_COLOR_ACTIVE,
-                             bg_rect, 3, 50)
+                             bg_rect, 3, 25)
         else:
             pygame.draw.rect(self.display_surface, UI_BORDER_COLOR, bg_rect, 3,
-                             50)
+                             25)
 
         return bg_rect
 
